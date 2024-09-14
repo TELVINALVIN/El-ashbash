@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El-ashbash</title>
+    <link rel="stylesheet" href="video.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Our Video Gallery</h1>
+        <div class="row">
+            <div class="col">
+                <div class="feature-img">
+                    <img src="car.jpg" width="100%">
+                    <img src="play.png"class="play-btn" onclick="playVideo('car.mp4')">
+                </div>
+            </div>
+            <div class="col">
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="car.jpg" alt="">
+                        <img src="play.png"class="play-btn" onclick="playVideo('galleryvid.mp4')">
+
+                    </div>
+                    <p>Our latest Marcedes Benz Model. <br> You should try this out</p>
+                </div>
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="/static/images/car1.jpg" alt="">
+                        <img src="play.png"class="play-btn" onclick="playVideo('gallery2.mp4')">
+
+                    </div>
+                    <p>Offering the best Paint to your car <br> trust us to take care of your cars</p>
+                </div>
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="car.jpg" alt="">
+                        <img src="play.png"class="play-btn" onclick="playVideo('gallery3.mp4')">
+
+                    </div>
+                    <p>Our Sports Car Model <br> is the best for Safari Rally.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="video-player" id="videoplayer">
+        <video  width="100%" controls autoplay id="myvideo">
+
+            <source src="car.mp4" type="video/mp4" >
+        </video>
+        <img src="close.png" class="close-btn" onclick="stopbtn()">
+    </div>
+
+
+
+
+
+
+
+
+<script>
+
+var videoplayer = document.getElementById("videoplayer");
+var myvideo = document.getElementById("myvideo");
+
+function stopbtn(){
+    videoplayer.style.display = "none";
+}
+function playVideo(file){
+myvideo.src = file;
+videoplayer.style.display = "block";
+}
+
+</script>
+
+</body>
+</html>
