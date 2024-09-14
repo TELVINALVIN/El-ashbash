@@ -88,6 +88,14 @@ html::-webkit-scrollbar-thumb{
   display: none;
 }
 
+.home{
+  display: flex;
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+}
+
 /* responsiveness */
 
 @media (max-width: 991px) {
